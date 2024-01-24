@@ -114,7 +114,7 @@ public class SmoochCordova extends CordovaPlugin {
             Message message = new Message( args.getString(0) );
 
             if (conversation == null || conversation.getMessages().isEmpty()) { 
-                Smooch.createConversation("", "", null, null, Arrays.asList(message), null, new SmoochCallback<Void>() {
+                Smooch.createConversation("", "", null, null, Arrays.asList(message), null, new SmoochCallback<String>() {
                     @Override
                     public void run(Response response) {
                         if (response.getError() == null) {
